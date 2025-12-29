@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Delivery</title>
+</head>
+<link rel="stylesheet" href="Home.css">
+
+<body>
+    <div class="animated-bg"></div>
+
+    <header id="header">
+        <nav>
+            <div class="logo">⚡ EXPRESS</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Global Delivery. Lightning Fast.</h1>
+                <p>Explore Premium Shipping Options For Your Cargo</p>
+
+                <div class="tracking-container">
+                    <label class="tracking-label">Track Your Shipment</label>
+                    <div class="tracking-box">
+                        <input type="text" class="tracking-input" id="trackingInput" placeholder="Enter tracking ID">
+                        <button class="track-button" onclick="trackShipment()">Track Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="globe-container">
+                    <div class="globe"></div>
+                    <div class="orbit">
+                        <div class="orbit-dot"></div>
+                        <div class="orbit-dot"></div>
+                        <div class="orbit-dot"></div>
+                        <div class="orbit-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">150+</span>
+                <p class="stat-label">Countries Served</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2M+</span>
+                <p class="stat-label">Deliveries/Year</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">99.8%</span>
+                <p class="stat-label">On-Time Rate</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <p class="stat-label">Support Available</p>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Premium Services</h2>
+        <p class="section-subtitle">Tailored logistics solutions for every need</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-icon">✈️</span>
+                <h3>Express Air Freight</h3>
+                <p>Rapid and secure air freight solutions for swift delivery. Benefit from our global partnerships to
+                    seamlessly transport
+                    your cargo by air, ensuring it reaches its destination on time.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🚢</span>
+                <h3>Sea Freight</h3>
+                <p>Efficient and reliable sea freight services to transport your cargo across oceans. Trust us to ensure
+                    secure and timely
+                    delivery through our extensive maritime network.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🚚</span>
+                <h3>Package Forwarding</h3>
+                <p>Convenient package forwarding services designed to meet your unique needs. We handle the forwarding
+                    process efficiently,
+                    ensuring your packages reach their destination with care and speed.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">📦</span>
+                <h3>Smart Warehousing</h3>
+                <p>Climate-controlled storage facilities with advanced inventory management and 24/7 security.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🌍</span>
+                <h3>Deliver </h3>
+                <p>Expert navigation of international regulations with seamless customs clearance services.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <h2 class="section-title">Leadership Team</h2>
+        <p class="section-subtitle">Meet the experts behind our success</p>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="team-avatar">👨‍💼</div>
+                <h3>David Chen</h3>
+                <p class="team-role">CEO & Founder</p>
+                <p>20+ years in global logistics. Former VP at DHL. Harvard MBA.</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">👩‍💼</div>
+                <h3>Sarah Williams</h3>
+                <p class="team-role">COO</p>
+                <p>Operations expert with background in supply chain optimization and lean management.</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">👨‍💻</div>
+                <h3>Marcus Johnson</h3>
+                <p class="team-role">CTO</p>
+                <p>Tech innovator specializing in AI-powered logistics and real-time tracking systems.</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">👩‍⚖️</div>
+                <h3>Elena Rodriguez</h3>
+                <p class="team-role">Head of Compliance</p>
+                <p>International trade law specialist ensuring seamless customs operations worldwide.</p>
+            </div>
+        </div>
+        <!--Logistic section-->
+        <section class="services" id="services">
+            <h2 class="section-title">Tailored logistics solutions for every need</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/052/408/766/small/a-large-white-truck-is-driving-next-to-a-large-yellow-container-ship-a-white-airplane-is-flying-above-the-truck-and-the-ship-concept-of-transportation-and-movement-as-the-truck-ship-photo.jpg"
+                            alt="">
+                    </span>
+                    <h3>Express Air Freight</h3>
+                    <p>Rapid and secure air freight solutions for swift delivery. Benefit from our global partnerships
+                        to
+                        seamlessly transport
+                        your cargo by air, ensuring it reaches its destination on time.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">
+                        <img src="https://media.istockphoto.com/id/591986620/photo/generic-cargo-container-ship-at-sea.jpg?s=612x612&w=0&k=20&c=l7C9Q5QItZTkYjPnCMa9lYyLhFGnVNWImHhxxiaH4HY="
+                            alt="">
+                    </span>
+                    <h3>Sea Freight</h3>
+                    <p>Efficient and reliable sea freight services to transport your cargo across oceans. Trust us to
+                        ensure
+                        secure and timely
+                        delivery through our extensive maritime network.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">
+                        <img src="https://d2z2mkwk6fkehh.cloudfront.net/f2me/blog/What%20is%20a%20package%20forwarding%20service/e01745387975f7ca51edebbeb8791c09.jpg"
+                            alt="">
+                    </span>
+                    <h3>Package Forwarding</h3>
+                    <p>Convenient package forwarding services designed to meet your unique needs. We handle the
+                        forwarding
+                        process efficiently,
+                        ensuring your packages reach their destination with care and speed.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">Client Success Stories</h2>
+        <p class="section-subtitle">Hear from businesses we've helped grow</p>
+
+        <div class="testimonials-slider">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Express Delivery transformed our international shipping. Their tracking
+                    system
+                    is incredibly accurate, and we've never had a late delivery. The white-glove service for our fragile
+                    electronics is outstanding."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JM</div>
+                    <div class="author-info">
+                        <h4>Jennifer Martinez</h4>
+                        <p>CEO, TechGlobal Inc.</p>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know</p>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>What countries do you ship to?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        We provide shipping services to over 150 countries worldwide, covering all major trade routes
+                        and
+                        emerging markets. Our extensive network ensures reliable delivery whether you're shipping to
+                        North
+                        America, Europe, Asia, Africa, or South America.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>How does real-time tracking work?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Our advanced GPS and RFID technology provides minute-by-minute updates on your shipment's
+                        location.
+                        You'll receive automatic notifications at key checkpoints, and can view the exact position of
+                        your
+                        cargo on our interactive map 24/7 through our web portal or mobile app.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is your guarantee policy?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        We guarantee on-time delivery for all express shipments. If we miss the committed delivery date,
+                        you'll receive a full refund of shipping costs. All cargo is fully insured, and we offer
+                        additional
+                        premium insurance options for high-value items.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Do you handle customs clearance?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes, our expert customs brokerage team handles all documentation, duties, and regulatory
+                        compliance.
+                        We work with customs authorities worldwide to ensure smooth clearance and minimal delays,
+                        keeping
+                        you informed throughout the entire process.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>What makes your white-glove service special?</span>
+                    <div class="faq-icon">+</div>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Our white-glove service includes specialized packaging, climate-controlled transport, dedicated
+                        handlers, and a personal account manager. We treat every shipment as if it were our own,
+                        providing
+                        extra care for fragile, valuable, or time-sensitive cargo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Start your journey with premium logistics</p>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's Connect</h2>
+                <p>Whether you need a custom quote, have questions about our services, or want to discuss your logistics
+                    needs, our team is here to help.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Delivery Address </strong><br>
+                            3833 Columbia Ave unit 1, - cozy court mountville pa 17554
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            expressdeliveryservicehq08@gmail.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Headquarters</strong><br>
+                            622 S College Ave, Newark, DE 19713, USA
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service">
+                        <option>Express Air Freight</option>
+                        <option>Ocean Shipping</option>
+                        <option>Ground Logistics</option>
+                        <option>Smart Warehousing</option>
+                        <option>Customs Brokerage</option>
+                        <option>White Glove Service</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">⚡ EXPRESS</div>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#careers">Careers</a>
+                <a href="#partners">Partners</a>
+            </div>
+            <p class="copyright">© 2024 Express Delivery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    function trackShipment() {
+        const trackingId = document.getElementById('trackingInput').value;
+        if (trackingId) {
+            alert(`Tracking shipment: ${trackingId}\n\nStatus: Product In Sorting Centre \nLocation: 222 Eden Rd, Lancaster, PA 17601, United State: `);
+        } else {
+            alert('Please enter a tracking ID');
+        };
+
+    };
+
+    if (!String.prototype.includes) {
+        String.prototype.includes = function (search, start) {
+            'use strict';
+            if (typeof start !== 'numbe') {
+                start = 0;
+            }
+
+            if (start + search.length > this.length) {
+                return false;
+            } else {
+                return this.indexOf(search, start) !== -1;
+            }
+        };
+    }
+
+    function toggleFaq(button) {
+        const faqItem = button.parentElement;
+        const wasActive = faqItem.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        if (!wasActive) {
+            faqItem.classList.add('active');
+        }
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        alert(`Thank you, ${name}! We've received your message and will get back to you within 24 hours.`);
+        event.target.reset();
+    }
+
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                const navLinks = document.getElementById('navLinks');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+
+    // Navigation Menu Toggle
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    // Tracking Database - Sample tracking numbers with detailed information
+    const trackingDatabase = {
+        'XKWXSIUOUXOLTO3VSC8': {
+            status: 'Sorting Centre',
+            location: '222 Eden Rd, Lancaster, PA 17601, United States',
+            estimatedDelivery: '',
+            origin: '',
+            destination: 'United States',
+            timeline: [
+                { date: 'Dec 28, 2025 - 7:32 PM', event: 'Package picked up', location: 'Newark DE' },
+                { date: 'Dec 28, 2025 - 10:48 PM', event: 'Arrived at Sorting center', location: 'Lancaster, PA' },
+                { date: 'Dec 29, 2025 - 7:04 AM', event: 'Tax Payment', location: 'NOT PAID' },
+                { date: 'Dec 29, 2025 - Estimated time for final delivery 1 Hour' },
+                { dates: 'Dec 29, 2025 - Delivery Center', location: '3833, Columbia Ave Unit 1 Cozy Court  Mountville PA 17554' },
+            ]
+        },
+        'EXP987654321': {
+            status: 'Out for Delivery',
+            location: 'Local Delivery Center, Newark, DE',
+            estimatedDelivery: 'Today by 6:00 PM',
+            origin: 'Miami, FL',
+            destination: '622 S College Ave, Newark, DE 19713',
+            carrier: 'Ground Express',
+            weight: '12 lbs',
+            timeline: [
+                { date: 'Dec 27, 2025 - 9:00 AM', event: 'Package picked up', location: 'Miami, FL' },
+                { date: 'Dec 27, 2025 - 8:00 PM', event: 'Departed sorting facility', location: 'Atlanta, GA' },
+                { date: 'Dec 28, 2025 - 11:30 AM', event: 'Arrived at regional hub', location: 'Richmond, VA' },
+                { date: 'Dec 29, 2025 - 7:00 AM', event: 'Arrived at local facility', location: 'Newark, DE' },
+                { date: 'Dec 29, 2025 - 2:00 PM', event: 'Out for delivery', location: 'Newark, DE' }
+            ]
+        },
+        'EXP456789123': {
+            status: 'Delivered',
+            location: 'Front Door',
+            estimatedDelivery: 'Delivered on Dec 28, 2024 at 3:15 PM',
+            origin: 'Seattle, WA',
+            destination: 'Boston, MA',
+            carrier: 'Express Air Freight',
+            weight: '8 lbs',
+            timeline: [
+                { date: 'Dec 26, 2025 - 10:00 AM', event: 'Package picked up', location: 'Seattle, WA' },
+                { date: 'Dec 26, 2025 - 6:00 PM', event: 'Departed air facility', location: 'Seattle, WA' },
+                { date: 'Dec 27, 2025 - 2:30 AM', event: 'Arrived at destination facility', location: 'Boston, MA' },
+                { date: 'Dec 28, 2025 - 8:00 AM', event: 'Out for delivery', location: 'Boston, MA' },
+                { date: 'Dec 28, 2025 - 3:15 PM', event: 'Delivered - Signed by: J. Smith', location: 'Boston, MA' }
+            ]
+        },
+        'EXP789456123': {
+            status: 'Processing',
+            location: 'Warehouse, Los Angeles, CA',
+            estimatedDelivery: 'January 2, 2025',
+            origin: 'Los Angeles, CA',
+            destination: 'Denver, CO',
+            carrier: 'Ground Logistics',
+            weight: '45 lbs',
+            timeline: [
+                { date: 'Dec 29, 2025 - 1:00 PM', event: 'Order received', location: 'Los Angeles, CA' },
+                { date: 'Dec 29, 2025 - 3:30 PM', event: 'Package prepared for shipment', location: 'Los Angeles, CA' }
+            ]
+        },
+        'EXP321654987': {
+            status: 'Delayed',
+            location: 'Customs Clearance, JFK Airport, NY',
+            estimatedDelivery: 'January 3, 2025 (Delayed due to customs)',
+            origin: 'London, UK',
+            destination: 'Philadelphia, PA',
+            carrier: 'International Express',
+            weight: '18 lbs',
+            timeline: [
+                { date: 'Dec 25, 2025 - 4:00 PM', event: 'Package picked up', location: 'London, UK' },
+                { date: 'Dec 26, 2025 - 8:00 AM', event: 'Departed international facility', location: 'London, UK' },
+                { date: 'Dec 27, 2025 - 2:00 PM', event: 'Arrived at customs', location: 'JFK Airport, NY' },
+                { date: 'Dec 29, 2025 - 9:00 AM', event: 'Held for customs inspection', location: 'JFK Airport, NY' }
+            ]
+        }
+    };
+
+    // Track Shipment Function
+    function trackShipment() {
+        const trackingId = document.getElementById('trackingInput').value.trim().toUpperCase();
+
+        if (!trackingId) {
+            showTrackingModal('Error', 'Please enter a tracking number', 'error');
+            return;
+        }
+
+        // Check if tracking number exists in database
+        if (trackingDatabase[trackingId]) {
+            const shipment = trackingDatabase[trackingId];
+            displayTrackingDetails(trackingId, shipment);
+        } else {
+            showTrackingModal(
+                'Tracking Number Not Found',
+                `We couldn't find any shipment with tracking number: <strong>${trackingId}</strong><br><br>
+            Please check your tracking number and try again.<br><br>
+            <strong>Sample tracking numbers to try:</strong><br>
+            • EXP123456789 (In Transit)<br>
+            • EXP987654321 (Out for Delivery)<br>
+            • EXP456789123 (Delivered)<br>
+            • EXP789456123 (Processing)<br>
+            • EXP321654987 (Delayed)`,
+                'error'
+            );
+        }
+    }
+
+    // Display Detailed Tracking Information
+    function displayTrackingDetails(trackingId, shipment) {
+        const statusColors = {
+            'Delivered': '#10b981',
+            'Out for Delivery': '#3b82f6',
+            'In Transit': '#f59e0b',
+            'Processing': '#8b5cf6',
+            'Delayed': '#ef4444'
+        };
+
+        const statusColor = statusColors[shipment.status] || '#6b7280';
+
+        let timelineHTML = shipment.timeline.map(item => `
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: start;">
+            <div style="width: 12px; height: 12px; background: ${statusColor}; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+            <div style="flex: 1;">
+                <div style="font-weight: 600; color: #fff; margin-bottom: 0.25rem;">${item.date}</div>
+                <div style="color: rgba(255,255,255,0.8);">${item.event}</div>
+                <div style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">${item.location}</div>
+            </div>
+        </div>
+    `).join('');
+
+        const modalContent = `
+        <div style="background: rgba(10, 14, 39, 0.98); padding: 0; border-radius: 20px; max-width: 700px; width: 90%; max-height: 90vh; overflow-y: auto;">
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 2rem; border-radius: 20px 20px 0 0;">
+                <h2 style="color: white; margin: 0 0 0.5rem 0; font-size: 1.8rem;">Tracking Details</h2>
+                <div style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Tracking #: ${trackingId}</div>
+            </div>
+            
+            <div style="padding: 2rem;">
+                <!-- Status Badge -->
+                <div style="display: inline-block; background: ${statusColor}; color: white; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 600; font-size: 1.1rem; margin-bottom: 2rem;">
+                    ${shipment.status}
+                </div>
+
+                <!-- Key Information -->
+                <div style="background: rgba(255,255,255,0.05); border-radius: 15px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0.5rem;">Current Location</div>
+                            <div style="color: white; font-weight: 600;">${shipment.location}</div>
+                        </div>
+                        <div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0.5rem;">Estimated Delivery</div>
+                            <div style="color: white; font-weight: 600;">${shipment.estimatedDelivery}</div>
+                        </div>
+                        <div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0.5rem;">Service Type</div>
+                            <div style="color: white; font-weight: 600;">${shipment.carrier}</div>
+                        </div>
+                        <div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0.5rem;">Weight</div>
+                            <div style="color: white; font-weight: 600;">${shipment.weight}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Route Information -->
+                <div style="background: rgba(255,255,255,0.05); border-radius: 15px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center;">
+                        <div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0.5rem;">Origin</div>
+                            <div style="color: white; font-weight: 600;">${shipment.origin}</div>
+                        </div>
+                        <div style="color: #667eea; font-size: 1.5rem;">→</div>
+                        <div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0.5rem;">Destination</div>
+                            <div style="color: white; font-weight: 600;">${shipment.destination}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div>
+                    <h3 style="color: white; margin-bottom: 1.5rem; font-size: 1.3rem;">Shipment Timeline</h3>
+                    <div style="position: relative; padding-left: 2rem;">
+                        <div style="position: absolute; left: 5px; top: 8px; bottom: 0; width: 2px; background: rgba(255,255,255,0.1);"></div>
+                        ${timelineHTML}
+                    </div>
+                </div>
+
+                <button onclick="closeTrackingModal()" style="width: 100%; margin-top: 2rem; padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 15px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s;">
+                    Close
+                </button>
+            </div>
+        </div>
+    `;
+
+        showCustomModal(modalContent);
+    }
+
+    // Show Simple Tracking Modal (for errors)
+    function showTrackingModal(title, message, type = 'info') {
+        const iconColors = {
+            'error': '#ef4444',
+            'success': '#10b981',
+            'info': '#3b82f6'
+        };
+
+        const icons = {
+            'error': '❌',
+            'success': '✅',
+            'info': 'ℹ️'
+        };
+
+        const modalContent = `
+        <div style="background: rgba(10, 14, 39, 0.98); padding: 3rem; border-radius: 20px; max-width: 500px; width: 90%; text-align: center; border: 2px solid ${iconColors[type]};">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">${icons[type]}</div>
+            <h2 style="color: white; margin-bottom: 1rem; font-size: 1.8rem;">${title}</h2>
+            <p style="color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem;">${message}</p>
+            <button onclick="closeTrackingModal()" style="padding: 1rem 3rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 15px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: transform 0.2s;">
+                Got It
+            </button>
+        </div>
+    `;
+
+        showCustomModal(modalContent);
+    }
+
+    // Show Custom Modal
+    function showCustomModal(content) {
+        // Remove existing modal if any
+        const existingModal = document.getElementById('trackingModal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+
+        // Create modal
+        const modal = document.createElement('div');
+        modal.id = 'trackingModal';
+        modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        animation: fadeIn 0.3s ease;
+    `;
+        modal.innerHTML = content;
+
+        // Add animation
+        const style = document.createElement('style');
+        style.textContent = `
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #trackingModal button:hover {
+            transform: translateY(-2px);
+        }
+    `;
+        document.head.appendChild(style);
+
+        // Close on backdrop click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeTrackingModal();
+            }
+        });
+
+        document.body.appendChild(modal);
+    }
+
+    // Close Tracking Modal
+    function closeTrackingModal() {
+        const modal = document.getElementById('trackingModal');
+        if (modal) {
+            modal.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => modal.remove(), 300);
+        }
+    }
+
+    // FAQ Toggle
+    function toggleFaq(button) {
+        const faqItem = button.parentElement;
+        const wasActive = faqItem.classList.contains('active');
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        if (!wasActive) {
+            faqItem.classList.add('active');
+        }
+    }
+
+    // Contact Form Submit
+    function handleSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        showTrackingModal(
+            'Message Sent Successfully!',
+            `Thank you, ${name}! We've received your message and will get back to you within 24 hours. Check your email for a confirmation.`,
+            'success'
+        );
+        event.target.reset();
+    }
+
+    // Header Scroll Effect
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Smooth Scroll for Navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                const navLinks = document.getElementById('navLinks');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+
+    // Allow Enter key to track shipment
+    document.addEventListener('DOMContentLoaded', () => {
+        const trackingInput = document.getElementById('trackingInput');
+        if (trackingInput) {
+            trackingInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    trackShipment();
+                }
+            });
+        }
+    });
+</script>
+
+</html>
